@@ -23,3 +23,26 @@ hidden and  you use a normal sized font.
 that it needs to be data driven. Microbiology, video game statisitics, immunology,
 whatever. Do something where it will be easy for you to come up with an interesting
 question and fun analysis.
+
+---
+title: "Project 1"
+output: html_document
+---
+
+Introduction
+  Background information on League of Legends
+    General gameplay
+    LCS
+    Relevant statistics
+  Is there a correlation between win rate and KDA ratio, gold per minute, minions killed, or champions killed?
+  Importance: Determining the factors for victory in LoL
+  Approach to data analysis
+    LCS Summer 2014 data
+    Spearman correlation(?) comparing win rate with each of the independent variables
+Data
+  Table with Summer 2014 LCS data
+  Description of data and its origin
+Results
+Discussion
+Future Directions
+  Possible implications of results
