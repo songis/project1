@@ -111,7 +111,7 @@ LCS.cor<-data.frame(Variable=c("KDA.Ratio","Gold.Min","Minions.Killed","Champion
 LCS.cor
 ```
 
-As observed by the above table, KDA ratio, gold per minute, and champions killed all had correlation coefficients near 1, indicating strong positive correlations.  In addition, each of the p-values for those 3 results were well under the 0.05 threshold, making them statistically significant.
+As observed in the above table, KDA ratio, gold per minute, and champions killed all had correlation coefficients near 1 after applying Spearman and Pearson correlation tests, indicating strong positive correlations.  In addition, each of the p-values for those 3 results were well under the 0.05 threshold, making them statistically significant.
 
 However, the minions killed has a high p-value and relatively low correlation coefficient.  This shows that even if the p-value marked the result as significant (which it did not), there would only be a slight positive correlation.
 
