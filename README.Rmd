@@ -43,7 +43,6 @@ Data
   Table with Summer 2014 LCS data
   Description of data and its origin
 Methods
-  Removal of standing, region, team, total gold
   Calculate win rate
   Scatter plots for each of the variables
   Spearman correlation(?) 
@@ -71,5 +70,9 @@ LCS.table<-read.table("LCS Statistics (Summer 2014).txt",sep="|",header=TRUE,str
 LCS.table
 ```
 
-The above table shows some of the statistics that are published on the official Leauge of legends e-sports website for the 2014 summer split (http://na.lolesports.com/na-lcs/2014/split2/).  From left to right, the table conveys: 
-  standing of the team in its region, region of LCS, team name, average KDA ratio per game, average gold per minute per game, average minions killed per game, average champions killed per game, total gold
+The above table shows some of the team-specific statistics that are published on the official Leauge of legends e-sports website for the 2014 summer split (http://na.lolesports.com/na-lcs/2014/split2/).  From left to right, the table conveys: standing of the team in its region, region of LCS, team name, average KDA ratio per game, average gold per minute per game, average minions killed per game, average champions killed per game, total gold accumulated in the entirety of the split in millions, total wins, and total losses.  All 16 teams in NA and EU LCS are accounted for.
+
+**Methods**
+
+```{r,echo=FALSE}
+```
