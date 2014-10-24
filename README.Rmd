@@ -125,7 +125,8 @@ The average number of champions killed is a similar statistic to KDA ratio excep
 
 Gold per minute is, like champion kills, a statistic that is limited by lack of more specific data in making assertions beyond the observation that it is positively correlated with win rate.  Average gold per minute in a match can be very volatile; how much gold a team is gaining can vary significantly throughout a single match, and the enemy’s average gold per minute is also unknown.  But it can at least be asserted that the higher a team’s gold per minute is, the higher its win rate is.
 
+It is also important to note that the calculated values are not necessarily as accurate as they could be due to the small sample size.  There were only a total of 16 teams in the LCS 2014 summer split, which is far from an ideal number of samples.
 
+**Future Directions**
 
-
-
+The results of analyzing the data yield some very general insight into pro League of Legends strategy.  With that said, it is unfortunately too vague to be of too much use.  Further analysis is necessary to better understand what factors are most commonly correlated with victory.  This would require gathering data that is much more specific, involving match-by-match observation for specific times, differences in gold at those times, champion selection, etc.  Although, this would actually boost the accuracy of the statistical tests due to the larger sample sizes.  Instead of analyzing the averages of each team, analyzing individual matches allows for a sample size equal to all the matches played during the split (>100).  But if I were to name a specific direction that most interests me, it would be in exploration of gold differences.  My next step would be to mark gold differences between teams at pre-determined time points in each match.  The resulting data would be invaluable for answering questions such as: "How much of a gold lead at a certain time in a match gives a statistically significant win rate of above (some arbitrary percentage)?"  The results would be far more applicable in a game where numerous factors prevent too simplistic of an analytic approach from being very effective.
