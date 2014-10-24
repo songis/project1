@@ -57,4 +57,12 @@ The rise in LoL's popularity as the most popular game in the world has been acco
 
 The question to be addressed is: Is there a correlation between win rate and KDA ratio, gold per minute, minions killed, or champions killed, in games of LoL at the professional level?  In reality, there are many different ways to find victory in LoL.  Depending on what champions are picked and how each team plays, these can vary from chaotic 5v5 team fights, picking off singled out opponents, outmaneuvering the enemy in taking down structures, and everything in between.  It is unclear as to whether there are any variables that are consistently correlated with win rate.  Revealing any variables that show such correlations could provide evidence for the most effective and ineffective strategies, which is a topic that has been debated in the game for years.  Professional players have always struggled to find the best strategies; whether any are objectively (or at least evidently) superior to the rest remains to be discovered.
 
-I would like to begin this analysis of win rate correlation by studying the aforementioned variables: KDA ratio, gold per minute, minions killed, and champions killed.  I hypothesize that each of these variables are positively correlated with win rate due to the fact that increasing any of these variables either grants or is indicative of a team's advantage in game.  I believe this advantage will more often than not be translated into victory.
+I would like to begin this analysis of win rate correlation by studying the aforementioned variables: KDA ratio, gold per minute, minions killed, and champions killed.  First, I will draw a scatter plot to check the distribution.  If the data seems to follow a normal distribution, I will test for parametric Pearson correlation to determine correlation between each of the independent variables and win rate.  Otherwise, I will test for non-parametric Spearman correlation.  I hypothesize that each of these variables are positively correlated with win rate due to the fact that increasing any of these variables either grants or is indicative of a team's advantage in game.  I believe this advantage will more often than not be translated into victory.
+
+**Data**
+
+```{r,echo=TRUE}
+LCS.table<-read.table("LCS Statistics (Summer 2014).txt",sep="|",header=TRUE,stringsAsFactor=FALSE)
+
+
+```
