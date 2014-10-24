@@ -93,13 +93,18 @@ plot(LCS.table$Win.Rate,LCS.table$Champions.Killed,col="orange",pch=16,xlab="Win
 The above scatterplots compare each of the variables of interest to win rate.  Judging by the shape of the distributions, it seems reasonable to assume that the relatively linear distributions of the "Average KDA Ratio"" and "Average Amount of Gold Gained per Minute" graphs indicate that the data from those variables follow a relatively normal distribution.  Thus, I will test for Pearson correlation for these variables.  In contrast, the distributions of the Average Number of Minions Killed" and "Average Number of Champions Killed" graphs seem to lack a uniform distribution.  In these cases, I will test for Spearman correlation.
 
 ```{r,echo=FALSE}
-cor.test(LCS.table$Win.Rate,LCS.table$KDA.Ratio,method="pearson") #Pearson correlation for KDA ratio
-cor.test(LCS.table$Win.Rate,LCS.table$Gold.Min,method="pearson") #Pearson correlation for gold per minute
-cor.test(LCS.table$Win.Rate,LCS.table$Minions.Killed,method="spearman") #Spearman correlation for minions killed
-cor.test(LCS.table$Win.Rate,LCS.table$Champions.Killed,method="spearman") #Spearman correlation for champions killed
+KDA.Ratio.cor<-cor.test(LCS.table$Win.Rate,LCS.table$KDA.Ratio,method="pearson") #Pearson correlation for KDA ratio
+KDA.Ratio.cor
+Gold.Min.cor<-cor.test(LCS.table$Win.Rate,LCS.table$Gold.Min,method="pearson") #Pearson correlation for gold per minute
+Gold.Min.cor
+Minion.Killed.cor<-cor.test(LCS.table$Win.Rate,LCS.table$Minions.Killed,method="spearman") #Spearman correlation for minions killed
+Minion.Killed.cor
+Champions.Killed.cor<-cor.test(LCS.table$Win.Rate,LCS.table$Champions.Killed,method="spearman") #Spearman correlation for champions killed
+Champions.Killed.cor
 ```
 
 **Results**
+
 
 
 
