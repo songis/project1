@@ -59,7 +59,7 @@ To clarify some of the statistics tracked in LoL, there are 5 that will be studi
 
 The rise in LoL's popularity as the most popular game in the world has been accompanied by the explosive growth of its professional scene.  In North America and Europe, it is called the League of Legends Championship Series (LCS), of which there is both an NA and EU variant.  A single season of LCS consists of 8 teams and 28 total games.  Each team plays every other team in its respective region 4 times and is ranked at the end of the split by its number of wins.  The data that I will be analyzing is based on the combined stats of NA and EU's 2014 summer split.
 
-The question to be addressed is: Is there a correlation between win rate and KDA ratio, gold per minute, minions killed, or champions killed, in games of LoL at the professional level?  In reality, there are many different ways to find victory in LoL.  Depending on what champions are picked and how each team plays, these can vary from chaotic 5v5 team fights, picking off singled out opponents, outmaneuvering the enemy in taking down structures, and everything in between.  It is unclear as to whether there are any variables that are consistently correlated with win rate.  Revealing any variables that show such correlations could provide evidence for the most effective and ineffective strategies, which is a topic that has been debated in the game for years.  Professional players have always struggled to find the best strategies; whether any are objectively (or at least evidently) superior to the rest remains to be discovered.
+The question to be addressed is: Is there a correlation between win rate and KDA ratio, gold per minute, minions killed, or champions killed, in games of LoL at the professional level?  In reality, there are many different ways to find victory in LoL.  Depending on what champions are picked and how each team plays, these can vary from chaotic 5v5 team fights, picking off singled out opponents, outmaneuvering the enemy in taking down structures, and everything in between.  In addition, statistics such as the number of enemies killed or gold acquired are far more valuable when studied relative to the enemy.  For example, having a vast amount of gold means little if the opponent has just as much.  It is thus unclear as to whether there are any variables that are consistently correlated with win rate.  Revealing any variables that show such correlations could provide evidence for the most effective and ineffective strategies across various playstyles, which is a topic that has been debated in the game for years.  Professional players have always struggled to find the best strategies; whether any are objectively (or at least evidently) superior to the rest remains to be discovered.
 
 I would like to begin this analysis of win rate correlation by studying the aforementioned variables: KDA ratio, gold per minute, minions killed, and champions killed.  First, I will draw a scatter plot to check the distribution.  If the data seems to follow a normal distribution, I will test for parametric Pearson correlation to determine correlation between each of the independent variables and win rate.  Otherwise, I will test for non-parametric Spearman correlation.  I hypothesize that each of these variables are positively correlated with win rate due to the fact that increasing any of these variables either grants or is indicative of a team's advantage in game.  I believe this advantage will more often than not be translated into victory.
 
@@ -105,7 +105,15 @@ Champions.Killed.cor
 
 **Results**
 
+```{r,echo=FALSE}
+#Displays the relevant results of correlation tests in a data fram
+LCS.cor<-data.frame(Variable=c("KDA.Ratio","Gold.Min","Minions.Killed","Champions.Killed"),Test=c("Pearson","Pearson","Spearman","Spearman"),Correlation.Coefficient=c(0.8461,0.9625,0.3044,0.7008),p.Value=c(3.619e-05,2.532e-09,0.2517,0.002492),Signficant=c("Yes","Yes",'No','Yes'))
+LCS.cor
+```
 
+As observed by the above table, KDA ratio, gold per minute, and champions killed all had correlation coefficients near 1, indicating strong positive correlations.  In addition, each of the p-values for those 3 results were well under the 0.05 threshold, making them statistically significant.
+
+However, the minions killed has a high p-value and relatively low correlation coefficient.  This shows that even if the p-value marked the result as significant (which it did not), there would only be a slight positive correlation.
 
 
 
