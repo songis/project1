@@ -1,56 +1,8 @@
-Project 1
-========
-
-The project for the first half of the semester is due on October 24th as a pull
-request to this repository. The emphasis for this projet is on data analysis
-using tools of reproducible research including version tracking, knitr, and R
-markdown. You are free to answer any question you want, but you must provide a
-quantitative report that utilizes the material we have covered durign the first
-half of the semester.
-
-***Ground rules...***
-* Your document should layout your question in the introduction, provide a brief
-synopsis for why it is important, describe how you obtained the data, your general
-approach to analyzing the data, a summary of your results, a discussion, and
-mention of what your future directions would be.
-* You should post your project as a pull request to this repository as `*.Rmd`,
-`*.md`, and `.html` files. Prior to submitting the files, you should set
-`echo=FALSE` for all of the code chunks. This will hide the R code in the final
-document.
-* The final document should be approximately 5 pages when the code chunks are
-hidden and  you use a normal sized font.
-* I don't care what your question is or what subject domain it covers. The key is
-that it needs to be data driven. Microbiology, video game statisitics, immunology,
-whatever. Do something where it will be easy for you to come up with an interesting
-question and fun analysis.
-
 ---
 title: "Project 1"
 output: html_document
 ---
 
-Introduction
-  Background information on League of Legends
-    General gameplay
-    LCS
-    Relevant statistics
-  Is there a correlation between win rate and KDA ratio, gold per minute, minions killed, or champions killed?
-  Importance: Determining the factors for victory in LoL
-  Approach to data analysis
-    LCS Summer 2014 data
-    Spearman correlation(?) comparing win rate with each of the independent variables
-Data
-  Table with Summer 2014 LCS data
-  Description of data and its origin
-Methods
-  Calculate win rate
-  Scatter plots for each of the variables
-  Spearman correlation(?) 
-Results
-Discussion
-Future Directions
-  Possible implications of results
-  
 **Introduction**
   
 League of Legends, widely known simply as LoL, is a PC game categorized as a "MOBA," or "Multiplayer Online Battle Arena."  It is a game in which two teams of 5 players each face off to achieve the ultimate goal of destroying the opposing team's Nexus.  Each player controls a single "champion" who gets stronger as the game progresses, buying items with gold.  Gold is gained by killing "minions" that continuously push towards each enemy's nexus, taking down neutral monsters or enemy structures, and killing enemy champions.  All champions also receive a set amount of gold continuously throughout the game called "ambient gold."  Generally, a team with a gold lead has an advantage in fighting strength that becomes more significant as the gap in gold increases.  A sizable gold lead thus bestows a much higher chance of victory.  
@@ -125,7 +77,7 @@ The average number of champions killed is a similar statistic to KDA ratio excep
 
 Gold per minute is, like champion kills, a statistic that is limited by lack of more specific data in making assertions beyond the observation that it is positively correlated with win rate.  Average gold per minute in a match can be very volatile; how much gold a team is gaining can vary significantly throughout a single match, and the enemy’s average gold per minute is also unknown.  But it can at least be asserted that the higher a team’s gold per minute is, the higher its win rate is.
 
-It is also important to note that the calculated values are not necessarily as accurate as they could be due to the small sample size.  There were only a total of 16 teams in the LCS 2014 summer split, which is far from an ideal number of samples.
+It is also important to note that the calculated values are not necessarily as accurate as they could be due to the small sample size.  There were only a total of 16 teams in the LCS 2014 summer split, which is far from an ideal number of samples.  Also, two of the tests yieled a warning that p-value calculation may not be exact due to "ties," or identical data.  The impact should be minimal, but it is still worth noting.
 
 **Future Directions**
 
