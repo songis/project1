@@ -75,4 +75,38 @@ The above table shows some of the team-specific statistics that are published on
 **Methods**
 
 ```{r,echo=FALSE}
+LCS.table$Win.Rate<-((LCS.table$Wins)/28) #Adds extra column calculating win rate of each team
+LCS.table
 ```
+
+The above table was modified to add an extra column showing the calculated win rate for each team from the number of wins and total number of games.  This will be necessary for statistical calculations.
+
+```{r,echo=FALSE}
+#Draws scatter plots for each of the variables vs. win rate
+
+plot(LCS.table$Win.Rate,LCS.table$KDA.Ratio,col="blue",pch=16,xlab="Win Rate",ylab="KDA Ratio",main="Average KDA Ratio")
+plot(LCS.table$Win.Rate,LCS.table$Gold.Min,col="red",pch=16,xlab="Win Rate",ylab="Gold per Minute",main="Average Amount of Gold Gained per Minute")
+plot(LCS.table$Win.Rate,LCS.table$Minions.Killed,col="green",pch=16,xlab="Win Rate",ylab="Minions Killed",main="Average Number of Minions Killed")
+plot(LCS.table$Win.Rate,LCS.table$Champions.Killed,col="orange",pch=16,xlab="Win Rate",ylab="Champions Killed",main="Average Number of Champions Killed")
+```
+
+The above scatterplots compare each of the variables of interest to win rate.  Judging by the shape of the distributions, it seems reasonable to assume that the relatively linear distributions of the "Average KDA Ratio"" and "Average Amount of Gold Gained per Minute" graphs indicate that the data from those variables follow a relatively normal distribution.  Thus, I will test for Pearson correlation for these variables.  In contrast, the distributions of the Average Number of Minions Killed" and "Average Number of Champions Killed" graphs seem to lack a uniform distribution.  In these cases, I will test for Spearman correlation.
+
+```{r,echo=FALSE}
+cor.test(LCS.table$Win.Rate,LCS.table$KDA.Ratio,method="pearson") #Pearson correlation for KDA ratio
+cor.test(LCS.table$Win.Rate,LCS.table$Gold.Min,method="pearson") #Pearson correlation for gold per minute
+cor.test(LCS.table$Win.Rate,LCS.table$Minions.Killed,method="spearman") #Spearman correlation for minions killed
+cor.test(LCS.table$Win.Rate,LCS.table$Champions.Killed,method="spearman") #Spearman correlation for champions killed
+```
+
+**Results**
+
+
+
+
+
+
+
+
+
+
