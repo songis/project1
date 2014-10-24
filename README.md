@@ -61,8 +61,7 @@ I would like to begin this analysis of win rate correlation by studying the afor
 
 **Data**
 
-```{r,echo=TRUE}
+```{r}
 LCS.table<-read.table("LCS Statistics (Summer 2014).txt",sep="|",header=TRUE,stringsAsFactor=FALSE)
-
-
+LCS.table
 ```
